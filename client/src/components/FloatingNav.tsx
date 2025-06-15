@@ -48,25 +48,27 @@ const FloatingNav = () => {
   ];
 
   return (
-    <nav className="fixed top-5 right-5 z-50 glass rounded-2xl p-4">
+    <nav className="fixed top-5 right-5 z-50 glass rounded-2xl p-4 bg-white/80 dark:bg-black/80 shadow-lg transition-colors duration-500">
       <div className="flex items-center space-x-4">
         {navItems.map((item) => (
           <button
             key={item.id}
             onClick={() => scrollToSection(item.id)}
-            className={`p-2 rounded-lg hover:bg-white/20 transition-all duration-300 hover:scale-110 ${
-              activeSection === item.id ? 'bg-white/20' : ''
+            className={`p-2 rounded-lg hover:bg-cyan-100 dark:hover:bg-cyan-900 transition-all duration-300 hover:scale-110 ${
+              activeSection === item.id
+                ? 'bg-cyan-200 dark:bg-cyan-800'
+                : ''
             }`}
           >
             <i className={`${item.icon} ${item.color}`}></i>
           </button>
         ))}
-        <button
+        {/* <button
           onClick={toggleTheme}
-          className="theme-toggle p-2 rounded-lg hover:bg-white/20"
+          className="theme-toggle p-2 rounded-lg hover:bg-yellow-100 dark:hover:bg-yellow-900 transition-colors duration-300"
         >
-          <i className={`fas ${theme === 'dark' ? 'fa-sun' : 'fa-moon'} text-yellow-400`}></i>
-        </button>
+          <i className={`fas ${theme === 'dark' ? 'fa-sun' : 'fa-moon'} ${theme === 'dark' ? 'text-yellow-400' : 'text-blue-500'}`}></i>
+        </button> */}
       </div>
     </nav>
   );

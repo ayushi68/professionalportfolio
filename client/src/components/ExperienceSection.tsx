@@ -7,12 +7,12 @@ const ExperienceSection = () => {
       company: 'IIT Bhilai',
       location: 'Bhilai, Chhattisgarh',
       period: 'Jan 2025 - Mar 2025',
-      status: 'current',
+      status: 'completed',
       color: 'cyan',
       achievements: [
-        'Optimized ML model training with CUDA, reducing training time by 80%',
-        'Worked with millions of data points for time and space complexity optimization',
-        'Improved test pass rates by 78% through unit testing and optimization'
+        'Developed secure e-Voting DApp using React.js and blockchain, achieving 100% uptime',
+        'Designed responsive UI, improving accessibility',
+        'Implemented RESTful APIs with Node.js, enhancing integration efficiency by 20%'
       ]
     },
     {
@@ -48,9 +48,9 @@ const ExperienceSection = () => {
       status: 'completed',
       color: 'yellow-400',
       achievements: [
-        'Developed secure e-Voting DApp using React.js and blockchain, achieving 100% uptime',
-        'Designed responsive UI, improving accessibility',
-        'Implemented RESTful APIs with Node.js, enhancing integration efficiency by 20%'
+        'Optimized ML model training with CUDA, reducing training time by 80%',
+        'Worked with millions of data points for time and space complexity optimization',
+        'Improved test pass rates by 78% through unit testing and optimization'
       ]
     }
   ];

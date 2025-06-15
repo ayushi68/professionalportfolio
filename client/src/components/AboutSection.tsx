@@ -21,8 +21,8 @@ const AboutSection = () => {
 
   const stats = [
     { value: '1+', label: 'Years Experience', color: 'text-cyan' },
-    { value: '15+', label: 'Projects Completed', color: 'text-teal' },
-    { value: '500+', label: 'Users Served', color: 'text-coral' },
+    { value: '4', label: 'Projects Completed', color: 'text-teal' },
+    { value: '2', label: 'Organizations Served', color: 'text-coral' },
     { value: '95%', label: 'Accuracy Rate', color: 'text-cyan' }
   ];
 

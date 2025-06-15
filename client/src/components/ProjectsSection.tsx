@@ -5,38 +5,40 @@ const ProjectsSection = () => {
     {
       title: 'ISKCON Bhilai Management System',
       description: 'Comprehensive 110-page MERN stack application for event management, supporting 500+ users with optimized MongoDB APIs.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=200&fit=crop',
+      image: '/iskcon.png',
       technologies: ['React.js', 'Node.js', 'MongoDB', 'Express.js'],
       stats: [
-        { label: 'Users', value: '500+' },
         { label: 'Faster APIs', value: '40%' }
       ],
       color: 'cyan',
-      category: 'MERN Stack'
+      category: 'MERN Stack',
+      demolink: 'https://iskcon-bhilai-management-system.vercel.app/',
+      codelink: 'https://github.com/ayushi68/IskconSeva'
     },
     {
-      title: 'Restaurant Management Web App',
-      description: 'React.js dashboard streamlining operations for 10+ restaurants with intuitive UI design and integrated Node.js APIs.',
-      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=200&fit=crop',
-      technologies: ['React.js', 'Node.js', 'Dashboard', 'Analytics'],
+      title: 'Evoting DApp',
+      description: 'Secure e-Voting decentralized application built with React.js and blockchain, achieving 100% uptime and enhanced security.',
+      image: '/vote.png',
+      technologies: ['React.js', 'Node.js', 'Blockchain'],
       stats: [
-        { label: 'Restaurants', value: '10+' },
         { label: 'More Engagement', value: '25%' }
       ],
       color: 'teal',
-      category: 'React Dashboard'
+      category: 'React Dashboard',
+      // demolink: 'https://evoting-dapp.vercel.app/',
+      codelink: 'https://github.com/ayushi68/lottery-app-blockchain'
     },
     {
-      title: 'Object Detection System',
-      description: 'Real-time detection system built with OpenCV and CNN, achieving 95% accuracy in object recognition and tracking.',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=200&fit=crop',
-      technologies: ['OpenCV', 'CNN', 'Python', 'TensorFlow'],
+      title: 'Speaker Verification System',
+      description: 'Real-time speaker verification system using OpenCV and CNN, achieving 95% accuracy with real-time detection capabilities.',
+      image: '/speaker.jpg',
+      technologies: ['scikit-learn', 'CV2', 'Python', 'TensorFlow'],
       stats: [
         { label: 'Accuracy', value: '95%' },
-        { label: 'Detection', value: 'Real-time' }
       ],
       color: 'coral',
-      category: 'AI/ML'
+      category: 'AI/ML',
+      codelink: 'https://github.com/ayushi68/SpeakerVerification'
     }
   ];
 
@@ -135,12 +137,26 @@ const ProjectsSection = () => {
                   </div>
                   
                   <div className="flex space-x-3">
-                    <button className={`flex-1 ${colors.bg} ${colors.text} px-4 py-2 rounded-xl text-center transition-all duration-300 hover:scale-105`}>
-                      <i className="fas fa-external-link-alt mr-2"></i>Demo
-                    </button>
-                    <button className="flex-1 glass hover:bg-white/20 px-4 py-2 rounded-xl text-center transition-all duration-300 hover:scale-105">
-                      <i className="fab fa-github mr-2"></i>Code
-                    </button>
+                    {project.demolink && (
+                      <a
+                        href={project.demolink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`flex-1 ${colors.bg} ${colors.text} px-4 py-2 rounded-xl text-center transition-all duration-300 hover:scale-105`}
+                      >
+                        <i className="fas fa-external-link-alt mr-2"></i>Demo
+                      </a>
+                    )}
+                    {project.codelink && (
+                      <a
+                        href={project.codelink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 glass hover:bg-white/20 px-4 py-2 rounded-xl text-center transition-all duration-300 hover:scale-105"
+                      >
+                        <i className="fab fa-github mr-2"></i>Code
+                      </a>
+                    )}
                   </div>
                 </GlassCard>
               </div>

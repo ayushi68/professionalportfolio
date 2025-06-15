@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useTheme } from '@/hooks/useTheme';
 import ThreeBackground from '@/components/ThreeBackground';
 import ParticleSystem from '@/components/ParticleSystem';
 import FloatingNav from '@/components/FloatingNav';
@@ -9,6 +10,7 @@ import ProjectsSection from '@/components/ProjectsSection';
 import ContactSection from '@/components/ContactSection';
 
 const Portfolio = () => {
+  const { theme } = useTheme();
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -73,7 +75,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="min-h-screen gradient-bg text-white font-inter overflow-x-hidden">
+    <div className={`min-h-screen gradient-bg font-inter overflow-x-hidden transition-colors duration-500 ${theme === 'dark' ? 'bg-black' : 'bg-gray-100'}`}>
       {/* Background Effects */}
       <ThreeBackground />
       <ParticleSystem />
@@ -91,7 +93,7 @@ const Portfolio = () => {
           <ContactSection />
           
           {/* Footer */}
-          <footer className="py-12 px-4 border-t border-white/10">
+          <footer className={`py-12 px-4 border-t ${theme === 'dark' ? 'border-white/10' : 'border-black/10'}`}>
             <div className="container mx-auto max-w-6xl">
               <div className="text-center">
                 <p className="text-muted-foreground mb-4">

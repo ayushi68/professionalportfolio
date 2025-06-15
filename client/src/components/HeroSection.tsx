@@ -4,8 +4,8 @@ const HeroSection = () => {
   const handleDownloadCV = () => {
     // Create a blob with CV content or redirect to CV file
     const link = document.createElement('a');
-    link.href = '/cv_ayushi_samaddar.pdf'; // This would be served from public folder
-    link.download = 'Ayushi_Samaddar_CV.pdf';
+    link.href = '/cv.pdf'; // This would be served from public folder
+    link.download = 'cv.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -28,7 +28,11 @@ const HeroSection = () => {
           <div className="animate-float mb-8">
             <div className="w-40 h-40 mx-auto rounded-full glass p-4 mb-6 animate-glow">
               <div className="w-full h-full bg-gradient-to-br from-cyan to-teal rounded-full flex items-center justify-center">
-                <i className="fas fa-user text-4xl text-white"></i>
+                <img
+                  src="/Ayushi.jpg"
+                  alt="Ayushi Samaddar"
+                  className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-lg"
+                />
               </div>
             </div>
           </div>
@@ -42,7 +46,7 @@ const HeroSection = () => {
           </p>
           
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Results-driven developer with 1+ years of experience crafting responsive web applications 
+            Results-driven developer with 1+ years of experience at IIT BHILAI crafting responsive web applications 
             and intelligent systems. Specialized in React.js, Node.js, and Machine Learning integration.
           </p>
           

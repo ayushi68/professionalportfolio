@@ -28,15 +28,15 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Here you would typically send the form data to your backend
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      // Open mail client with prefilled fields
+      const subject = encodeURIComponent(formData.subject);
+      const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`);
+      window.location.href = `mailto:ayushi315645@gmail.com?subject=${subject}&body=${body}`;
+      // Optionally show toast
       toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        title: "Opening your mail client...",
+        description: "Please complete and send your message from your email app.",
       });
-      
       setFormData({
         name: '',
         email: '',
@@ -45,7 +45,7 @@ const ContactSection = () => {
       });
     } catch (error) {
       toast({
-        title: "Error sending message",
+        title: "Error opening mail client",
         description: "Please try again later or contact me directly via email.",
         variant: "destructive"
       });
